@@ -1,13 +1,13 @@
 import React from 'react';
 import './App.css';
-import Excomponent from './ex_component.js'
+import ImportConponent from './R003_ImportConponent.js'
 
 function App() {
     return (
         <div>
             <h1>Start React 200!</h1>
             <p>CSS 적용하기</p>
-            <Excomponent></Excomponent>
+            <ImportConponent></ImportConponent>
         </div>
     ) ;
 }
