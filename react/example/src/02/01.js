@@ -1,3 +1,5 @@
+// ES5 템플릿 문자열 처리
+
 var string1 = "안녕하세요";
 var string2 = "반갑습니다";
 var greeting = string1 + " " + string2;
@@ -13,3 +15,4 @@ var operator1 = "곱셈값은 " + (value1 * value2) + '입니다.';
 console.log(operator1);
 var operator2 = "불리언값은 " + (boolValue ? '참' : '거짓') + "입니다.";
 console.log(operator2);
+

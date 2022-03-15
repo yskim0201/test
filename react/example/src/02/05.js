@@ -11,7 +11,7 @@ var combined = {
 
 var combined = Object.assign({}, objectOne, objectTwo); // {}객체에 하나씩 덮어 씀
 console.log(combined);
-// combined = { one : 1, two : 2, three : 3, four : 4, other : -1
+// combined = { one : 1, two : 2, three : 3, four : 4, other : -1}
 var combined = Object.assign({}, objectTwo, objectOne); // 덮어쓰는 순서 변경
 // combined = {one : 1, two : 2, three : 3, four : 4, other : 0}
 console.log(combined);
