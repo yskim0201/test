@@ -1,15 +1,11 @@
 import React from 'react';
 import './App.css';
-import ImportConponent from './R003_ImportConponent.js'
+import Site from './01/Site.jsx' // Site 컴포넌트 사용하여 제작
 
 function App() {
     return (
-        <div>
-            <h1>Start React 200!</h1>
-            <p>CSS 적용하기</p>
-            <ImportConponent></ImportConponent>
-        </div>
-    ) ;
+        <Site />
+    );
 }
 
 export default App;

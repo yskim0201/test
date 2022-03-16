@@ -11,7 +11,7 @@ var cart = {
 var product = {};
 var myCart = "장바구니에 " + cart.name + '가 있습니다. 총 금액은 ' + getTotal(cart) + '입니다.';
 console.log(myCart);
-ㄴ
+
 //ES6 템플릿
 function getTotal(cart) {
     return cart.amount * cart.price;

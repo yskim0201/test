@@ -15,5 +15,5 @@ var purpleCuteSlime = {
 };
 console.log(purpleCuteSlime);
 
-var {col, ...others} = cuteSlime;
+var {col, ...others} = cuteSlime; // 앞을 제외한 나머지 출력
 console.log(cuteSlime);
