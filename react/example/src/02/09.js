@@ -50,3 +50,20 @@ Object.assign(Circle.prototype, Shape.prototype, { // 부모클래스의 함수 
 var c = new Circle(0, 0, 10);
 c.area(); // 100
 console.log(c.area());
+
+// quiz Rectangle
+function Rectangle(x, y, length) {
+    Shape.call(this, x, y);
+    this.name = 'Rectangle';
+    this.length = length;    
+}
+
+Object.assign(Rectangle.prototype, Shape.prototype, {
+    area : function() {
+        return this.length * this.length;
+    },
+});
+
+var r = new Rectangle(0, 0, 15);
+r.area();
+console.log(r.area());
