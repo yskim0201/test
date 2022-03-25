@@ -13,8 +13,9 @@ var box = new Box(2, 2);
 box.calculateArea();
 console.log(box.calculateArea());
 
-//ES6 클래스
 
+
+//ES6 클래스
 class Box1 {
     static create(length, width) {
         return new Box1(length, width);

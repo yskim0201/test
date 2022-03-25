@@ -30,6 +30,18 @@ function addNumber(num) {
 
 //화살표 함수로 변환한 예
 var addNumber = num => value => num + value;
-var addTwo = addNumber(2);
+var addTwo = addNumber(2); // 같은 표현으로 addNumber(2)(4)
 var result = addTwo(4);
 console.log(result);
+
+//bind() 함수 이용
+class Myclass {
+    value = 10;
+    constructor() {
+        var addThis2 = function(first, second) {
+            return this.value + first + second;
+        }.bind(this);
+        var addThis3 = (first, second) => this.value + first + second;
+        //화살표 함수일 경우 bind 생략 가능
+    }
+}

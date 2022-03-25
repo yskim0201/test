@@ -15,7 +15,7 @@ Shape.prototype.move = function(x, y) {
     this.y = y;
 };
 
-Shape.prototype.are = function() {
+Shape.prototype.area = function() {
     return 0;
 };
 
