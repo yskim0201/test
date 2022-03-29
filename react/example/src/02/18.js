@@ -13,3 +13,6 @@ function parse(qs) {
             [item.key] : item.value,
         }), {});
 }
+
+const result = parse(qs);
+console.log(result);
