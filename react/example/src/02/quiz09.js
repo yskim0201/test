@@ -14,6 +14,18 @@ var peoples = [
     }
 ];
 
+// function keyDivide(peoples) {
+//     return peoples.map((divide) => {
+//         var key = divide.age + '세';
+//         var tmp = {[key] : []};
+//         tmp[key].push(divide.name);
+//         return tmp;
+//     });
+// }
+
+// const result = keyDivide(peoples);
+// console.log(result);
+
 var group = {
     20 : [
         'Max',
@@ -23,3 +35,17 @@ var group = {
         'Alice',
          ],
 };
+
+function makeGroup(peoples) {
+    return peoples.reduce((newGroup, person) => {
+        var age = person["age"] + "`세";
+        if(!newGroup[age]) {
+            newGroup[age] = [];
+        } 
+        newGroup[age].push(person.name);
+        return newGroup;
+    }, {});
+}
+
+const result = makeGroup(peoples);
+console.log(result);
