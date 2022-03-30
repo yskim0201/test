@@ -70,7 +70,7 @@
 // work1 -> work2 -> nextWork -> work3
 
 
-// 시간에 상관없이 순서대로 출력하게 하려면
+// 시간순에 상관없이 순서대로 출력하게 하려면
 function work1(onDone) {
     setTimeout(() => onDone('작업1 완료!'), 2000);
 }
