@@ -21,7 +21,7 @@ work3(function (msg3) {
 });
 nextWork();
 
-//순서대로 작업을 하게 하려면
+// 시간에 상관없이 순서대로 작업을 하게 하려면
 work1(function (msg1) {
     console.log(msg1);
     work2(function (msg2) {

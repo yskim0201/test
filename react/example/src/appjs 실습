@@ -1,0 +1,180 @@
+import React from 'react';
+import './App.css';
+import Es6 from './R009_Es6' // Site 컴포넌트 사용하여 제작
+
+function App() {
+    return (
+        <div>
+            <h1>Start React 200!</h1>
+            <p>CSS 적용하기</p>
+            <Es6/>
+        </div>
+    );
+}
+
+export default App;
+
+
+
+
+
+import React from 'react';
+import './App.css';
+import Variable from './R010_Variable'
+
+function App() {
+    return (
+        <diV>
+            <h1>Start React 200!</h1>
+            <p>CSS 적용하기</p>
+            <Variable/>
+        </diV>
+    );
+}
+
+export default App;
+
+
+import React from 'react';
+import './App.css';
+import SpreadOperator from './R011_SpreadOperator'
+
+function App() {
+    return (
+        <div>
+            <h1>Start React 200!</h1>
+            <p>CSS 적용하기</p>
+            <SpreadOperator/>
+        </div>
+    );
+}
+
+export default App;
+
+
+
+
+
+import React from 'react';
+import './App.css';
+import ClassPrototype from './R012_Class&Prototype'
+
+function App() {
+    return (
+        <div>
+            <h1>Start React 200!</h1>
+            <p>CSS 적용하기</p>
+            <ClassPrototype/>
+        </div>
+    );
+}
+
+export default App;
+
+
+
+
+
+import React from 'react';
+import './App.css';
+import ChildComponent from './03/ChildComponent';
+
+class App extends React.Component {
+    render() {
+        return (
+            <ChildComponent
+            boolValue = {true}
+            numValue = {1}
+            arrayValue = { [1, 2, 3] }
+            objValue = {{name : '제목', age : 30 }}
+            nodeValue = {<h1>노드</h1>}
+            funcValue = { () => {console.log('메세지');}}
+            />
+        );
+    }
+}
+
+export default App;
+
+
+
+
+
+
+import React from 'react';
+import './App.css';
+import ArrowFunc from './R013_ArrowFunction'
+
+function App() {
+    return (
+        <div>
+        <h1>Start React 200!</h1>
+        <p>CSS 적용하기</p>
+        <ArrowFunc/>
+        </div>
+    );
+}
+
+export default App;
+
+
+
+
+
+
+
+import React from 'react';
+import './App.css';
+import ForEach from './R014_ForEach'
+
+function App() {
+    return (
+        <div>
+        <h1>Start React 200!</h1>
+        <p>CSS 적용하기</p>
+        <ForEach/>
+        </div>
+    );
+}
+
+export default App;
+
+
+
+
+
+import React from 'react';
+import './App.css';
+import Map from './R015_Map'
+
+function App() {
+    return (
+        <div>
+        <h1>Start React 200!</h1>
+        <p>CSS 적용하기</p>
+        <Map/>
+        </div>
+    );
+}
+
+export default App;
+
+
+
+
+
+import React from 'react';
+import './App.css';
+import Jquery from './R016_Jquery'
+
+function App() {
+    return (
+        <div>
+        <h1>Start React 200!</h1>
+        <p>CSS 적용하기</p>
+        <Jquery/>
+        </div>
+    );
+}
+
+export default App;
