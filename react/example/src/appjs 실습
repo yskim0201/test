@@ -178,3 +178,238 @@ function App() {
 }
 
 export default App;
+
+
+
+
+
+
+
+import React from 'react';
+
+class App extends React.Component {
+    render() {
+        return (
+            //아래의 내용이 JSX 양식입니다
+            // img 태그 뒤에 붙는 백슬래쉬 반드시 필요
+            <div> 
+                <img src = "http://www.easyspub.co.kr/images/logo_footer.png"/> 
+                 
+
+                <div>안녕하세요</div>
+            </div>
+        );
+    }
+}
+
+export default App;
+
+
+
+
+import React from 'react';
+import TodayPlan from './03/TodayPlan';
+
+class App extends React.Component {
+    render() {
+        return (
+            <div> 
+                <div>
+                    <h1>부모컴포넌트</h1>
+                </div>
+                <div className = "body">
+                    <TodayPlan/>
+                </div>
+            </div>
+        );
+    }
+}
+
+export default App;
+
+
+
+
+import React from 'react';
+import "./App.css";
+import PropsObjVal from './R020_PropsObjVal.js'
+
+function App() {
+   return (
+       <div>
+           <h1>Start React 200!</h1>
+           <p>Css 적용하기</p>
+           <PropsObjVal Object_Json = {{react :"리액트", twohundred : 200}}/>
+       </div>
+   );
+}
+export default App;
+
+
+
+import React from 'react';
+import "./App.css";
+import PropsRequired from './R021_PropsRequired.js'
+
+function App() {
+   return (
+       <div>
+           <h1>Start React 200!</h1>
+           <p>Css 적용하기</p>
+           <PropsRequired ReactNumber = {200} />
+       </div>
+   );
+}
+export default App;
+
+
+
+import React from 'react';
+import "./App.css";
+import PropsDefault from './R022_PropsDefault.js'
+
+function App() {
+   return (
+       <div>
+           <h1>Start React 200!</h1>
+           <p>Css 적용하기</p>
+           <PropsDefault ReactNumber = {200} />
+       </div>
+   );
+}
+export default App;
+
+
+
+
+
+import React from 'react';
+import "./App.css";
+import PropsNode from './R023_PropsNode.js'
+
+function App() {
+   return (
+       <div>
+           <h1>Start React 200!</h1>
+           <p>Css 적용하기</p>
+           <PropsNode>
+               <span>node from App.js</span>
+           </PropsNode>
+       </div>
+   );
+}
+export default App;
+
+
+
+
+import React from 'react';
+import "./App.css";
+import BooleanComponent from './04/4_2.js';
+
+class App extends React.Component {
+    render() {
+        return (
+            <div>
+                <div><b>지루할 때 : </b><BooleanComponent bored /></div>
+                <div><b>즐거울 때 : </b><BooleanComponent/></div>
+            </div>
+        )
+    }
+}
+export default App;
+
+
+import React from 'react';
+import DefaultPropsComponent from './04/4_4.jsx';
+
+class App extends React.Component {
+    render() {
+        return (
+            <div>
+                <DefaultPropsComponent/> 
+            </div>
+        )
+    }
+}
+export default App;
+
+
+
+
+
+import React from 'react';
+import ChildProperty from './04/4_5';
+
+class App extends React.Component {
+    render() {
+        return (
+            <div>
+                <ChildProperty>
+                    <div>
+                        <span>자식노드</span>
+                        </div>
+                        </ChildProperty>
+            </div>
+        )
+    }
+}
+export default App;
+
+
+import React from 'react';
+import "./App.css"
+import Props from './R017_Props.js';
+
+function App() {
+        return (
+            <div>
+                <h1>START React 200!</h1>
+                <p>CSS 적용하기</p>
+                <Props props_val = "THIS IS PROPS"/>
+            </div>
+        );
+}
+export default App;
+
+
+import React from 'react';
+import "./App.css"
+import PropsDatatype from './R018_PropsDatatype';
+
+function App() {
+        return (
+            <div>
+                <h1>START React 200!</h1>
+                <p>CSS 적용하기</p>
+                <PropsDatatype
+                    String = "react"
+                    Number = {200}
+                    Boolean = {1==1}
+                    Array = {[0, 1, 0]}
+                    Object_Json = {{react : "리액트", twohundred : "200"}}
+                    Function = {console.log("FunctionProps : function!")}
+                />
+            </div>
+        );
+}
+export default App;
+
+
+import React, { Component } from 'react';
+
+class R019_PropsBoolean extends Component {
+    render() {
+        let {
+            BooleanTrueFalse
+        } =this.props
+        return (
+            <div style={{padding : "0px"}}>
+                {BooleanTrueFalse ? '2. ' : '1. '}
+                {BooleanTrueFalse.toString()}
+            </div>
+        );
+    }
+}
+
+export default R019_PropsBoolean;

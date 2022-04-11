@@ -1,21 +1,16 @@
+//props Boolean 사용하기
 import React from 'react';
-import ChildComponent from './03/ChildComponent';
+import "./App.css"
+import PropsBoolean from './R019_PropsBoolean';
 
-class App extends React.Component {
-    render() {
+function App() {
         return (
-            <div> 
-                <div>
-                    <h1>부모컴포넌트</h1>
-                </div>
-                <div classname = "body">
-                    <ChildComponent/>
-                </div>
-                    
-
+            <div>
+                <h1>START React 200!</h1>
+                <p>CSS 적용하기</p>
+                <PropsBoolean BooleanTrueFalse = {false}/>
+                <PropsBoolean BooleanTrueFalse/>
             </div>
         );
-    }
 }
-
 export default App;

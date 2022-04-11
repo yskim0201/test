@@ -31,7 +31,7 @@ import PropTypes from 'prop=types';
 class PropsComponent extends React.Component {
     render() {
         return (
-            <div className = "message=containder">
+            <div className = "message=container">
                 {this.props.name} //name 프로퍼티 내용 출력
                 
             </div>
@@ -70,7 +70,7 @@ class App extends React.Component {
     render() {
         return (
             <ChildComponent
-                boolValue = {true}
+                boolValue = {true} // 생략해도 true 전달, boolValue라인은 undefined 전달
                 numValue = {1}
                 arrayValue = { [1, 2, 3] }
                 objValue = {{name : '제목', age = 30 }}
