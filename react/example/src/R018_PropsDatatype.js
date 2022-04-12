@@ -1,3 +1,5 @@
+//quiz 3_4
+
 import React, { Component } from 'react';
 import datatype from "prop-types";
 
@@ -13,6 +15,7 @@ class R018_PropsDatatype extends Component {
                 <span>BooleanProps : {Boolean.toString()}</span>
                 <p>ArrayProps : {Array.toString()}</p>
                 <p>Object_JsonProps : {JSON.stringify(Object_Json)}</p>
+            
                 <p>FunctionProps : {Function}</p>
             </div>
         );
