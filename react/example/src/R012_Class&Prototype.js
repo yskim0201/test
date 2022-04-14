@@ -11,7 +11,7 @@ class ClassPrototype extends Component {
         //ES5 prototype
         var ExamCountFunc = (function () {
             function ExamCount(num) {
-                this.numver = num;
+                this.number = num;
             }
             ExamCount.prototype.showNum = function () {
                 console.log('1. react_ ' + this.number);
