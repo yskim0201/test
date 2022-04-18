@@ -449,3 +449,84 @@ class App extends React.Component {
 }
 
 export default App;
+
+
+import React from 'react';
+import StateExample from './05/StateExample.js';
+
+
+class App extends React.Component {
+    render( ) {
+        return (
+                <StateExample/>
+        );
+    }
+}
+
+export default App;
+
+
+
+import React from 'react';
+import Counter from './05/counter.jsx';
+
+
+class App extends React.Component {
+    render( ) {
+        return (
+                <Counter/>
+        );
+    }
+}
+
+export default App;
+
+
+import React from 'react';
+import ReactState from './05/R024_ReactState';
+
+
+class App extends React.Component {
+    render( ) {
+        return (
+                <ReactState reactString = {"react"}/>
+        );
+    }
+}
+
+export default App;
+
+
+//setState 함수 사용하기
+
+import React from 'react';
+import SetState from './05/R025_SetState';
+
+
+class App extends React.Component {
+    render( ) {
+        return (
+                <SetState/>
+        );
+    }
+}
+
+export default App;
+
+
+
+
+//생명주기 함수 사용
+import React from 'react';
+import LifeCycleExample from './05/LifeCycleExample';
+
+
+class App extends React.Component {
+    render( ) {
+        return (
+                <LifeCycleExample/> // LifeCycleExample 컴포넌트의 constructor() 실행
+        );
+    }
+}
+
+export default App;
