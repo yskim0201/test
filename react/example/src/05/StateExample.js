@@ -1,3 +1,4 @@
+//state 내용 정리
 import React, { Component } from 'react';
 
 class StateExample extends Component {
@@ -32,11 +33,18 @@ class StateExample extends Component {
 }
 
 export default StateExample;
+
+
+
+
 /*state를 사용할 때 주의할 점
 생성자에서 반드시 초기화해야한다.
 state값을 변경할 때는 setState() 함수를 반드시 사용해야 한다.
 setState() 함수는 비동기로 처리되며, setState() 코드 이후로 연결된 함수들의
 실행이 완료된 시점에 화면 동기화 과정을 거친다.*/
+
+
+
 
 
 /*setState() 함수의 마지막 인자로 함수를 전달하여 처리 */
@@ -48,6 +56,9 @@ setState() 함수는 비동기로 처리되며, setState() 코드 이후로 연�
 //     formData : data + prevState.formData,
 //   }));
 // }
+
+
+
 
 //2번째 방법
 // handleData() {

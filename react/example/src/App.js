@@ -1,9 +1,9 @@
 import React from 'react';
-import LifecycleEx from './05/R005_LifecycleEx.jsx';
+import Gugu from './05/Gugu.jsx';
 
 function App() {
     return (
-        <LifecycleEx></LifecycleEx>
+        <Gugu/>
     );
 }
 
