@@ -588,3 +588,28 @@ class counter extends Component {
 }
 
 export default counter;
+
+
+import React from 'react';
+import SetStateExample from './05/SetStateExample.jsx';
+
+function App() {
+    return (
+        <SetStateExample/>
+    );
+}
+
+
+export default App;
+
+import React from 'react';
+import Gugu from './05/Gugu.jsx';
+
+function App() {
+    return (
+        <Gugu/>
+    );
+}
+
+
+export default App;

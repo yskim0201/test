@@ -1,7 +1,7 @@
 //ES6 map
 const qs = 'banana=10&apple=20&orange=30';
 function parse(qs) {
-    const queryString = qs.substr(0);
+    const queryString = qs.substr(0); // 시작하는 위치서부터 문자 반환
     const chunks = queryString.split('&');
     const result = chunks.map((chunk) => {
         const [ key, value ] = chunk.split('=');

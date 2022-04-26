@@ -1,11 +1,10 @@
 import React from 'react';
-import Gugu from './05/Gugu.jsx';
+import SetStateExample from './05/SetStateExample.jsx';
 
 function App() {
     return (
-        <Gugu/>
+        <SetStateExample/>
     );
 }
-
 
 export default App;
