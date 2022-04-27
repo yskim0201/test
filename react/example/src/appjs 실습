@@ -599,8 +599,11 @@ function App() {
     );
 }
 
-
 export default App;
+
+
+
+
 
 import React from 'react';
 import Gugu from './05/Gugu.jsx';
@@ -613,3 +616,138 @@ function App() {
 
 
 export default App;
+
+
+
+import React from 'react';
+import LifecycleEx from './05/R006_LifecycleEx';
+
+function App() {
+    return (
+        <LifecycleEx
+            prop_value = 'FromApp.js'
+        />
+    );
+}
+
+export default App;
+
+
+
+
+import React from 'react';
+import LifecycleEx from './05/R007_LifecycleEx';
+
+function App() {
+    return (
+        <LifecycleEx
+            prop_value = 'FromApp.js'
+        />
+    );
+}
+
+export default App;
+
+
+
+
+import React from 'react';
+import LifecycleEx from './05/R008_LifecycleEx';
+
+function App() {
+    return (
+        <LifecycleEx
+            prop_value = 'FromApp.js'
+        />
+    );
+}
+
+export default App;
+
+
+import React from 'react';
+
+class MyComponent extends React.Component {
+    componentDidUpdate() { console.log('MyComponent 새로 고침'); }
+    render() {return <div>   </div>;}
+}
+
+class MyPureComponent  extends React.PureComponent {
+    componentDidUpdate() {console.log('MyPureComponent 새로고침');}
+        render() {return <div>   </div>;}
+}
+
+export default class App extends React.Component {
+    constructor(props) {
+        super(props);
+        this.listValue = [{name : "park"}, {name : "Lee"}];
+        this.state = {version : 0};
+        this.handleClick = this.handleClick.bind(this);
+    }
+
+    handleClick() {
+        this.listValue[0].name = "Justin";
+        this.setState({version : 0});
+        setTimeout( () => {
+            this.listValue[0].name = "None";
+        }, 1000);
+        setTimeout( () => {
+            this.listValue.pop();
+            this.setState({version : 2});
+        }, 2000);
+    }
+    render() {
+        return (
+            <div className = "body">
+                <MyComponent value = {this.state.version}/>
+                <MyPureComponent value = {this.state.version}/>
+                <button onClick={this.handleClick}>값 변경</button>
+            </div>        
+        );
+    }
+}
+
+
+
+
+import React from 'react';
+import ComponentClass from './06/R027_ComponentClass'
+
+function App() {
+    return (
+        <ComponentClass/>
+    );
+}
+
+export default App;
+
+
+
+import React from 'react';
+import PureComponentClass from './06/R028_PureComponentClass'
+
+function App() {
+    return (
+        <PureComponentClass/>
+    );
+}
+
+export default App;
+
+/*
+값이 변환되지 않는다면 render를 하지 않는다
+Component와 다른 점
+*/
+
+
+import React from 'react';
+import ShallowEqual from './06/R029_ShallowEqual'
+
+function App() {
+    return (
+        <ShallowEqual/>
+    );
+}
+
+export default App;
+
