@@ -751,3 +751,145 @@ function App() {
 
 export default App;
 
+
+
+
+import React from 'react';
+import SFC from './06/SFC'
+
+function App() {
+    return (
+        <SFC somePropValue = {10}/>
+    );
+}
+
+export default App;
+
+
+
+
+
+import React from 'react';
+import FunctionComponent from './06/R030_FunctionComponent'
+
+function App() {
+    return (
+        <FunctionComponent FunctionComponent contents = "[THIS IS FunctionComponent]"/>
+    );
+}
+
+export default App;
+
+
+
+import React from 'react';
+import ReactHook from './06/R031_ReactHook'
+
+function App() {
+    return (
+        <ReactHook/>
+    );
+}
+
+export default App;
+
+
+
+import React from 'react';
+import Fragments from './06/R032_Fragments'
+
+function App() {
+    return (
+        <Fragments/>
+    );
+}
+
+export default App;
+
+
+
+import React from 'react';
+import ListExample from './06/ListExample'
+
+function App() {
+    return (
+        <ListExample/>
+    );
+}
+
+export default App;
+
+
+import React from 'react';
+import TodoList from './06/TodoList'
+
+function App() {
+    return (
+        <TodoList/>
+    );
+}
+
+export default App;
+
+
+
+import React from 'react';
+import ReturnMap from './06/R033_ReturnMap'
+
+function App() {
+    return (
+        <ReturnMap/>
+    );
+}
+
+export default App;
+
+
+
+
+import React from 'react';
+import Counter from './06/Counter2'
+
+class App extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            count : 1,
+        };
+        //this.increaseCount = this.increaseCount.bind(this);
+        //bind 함수를 사용하면 오류 해결 가능
+    }
+    increaseCount() {
+        this.setState(({count}) => ({count : count + 1}));
+    }
+
+    render() {
+        return (
+            //<Counter count={this.state.count} onAdd={this.increaseCount.bind(this)}/>
+            <div>
+                현재 카운트 : {this.state.count}
+                <button onClick={() => this.increaseCount()}>App 카운트 증가</button>
+            </div>
+        );
+    }
+}
+
+export default App;
+
+//bind를 사용하기 전에는 this를 모르기 때문에 오류가 발생한다.
+
+
+
+
+import React from 'react';
+import ScrollSpy from './06/ScrollSpy'
+
+function App() {
+    return (
+        <ScrollSpy/>
+    );
+}
+
+export default App;
+
+

@@ -17,3 +17,31 @@ export class PureComponent extends React.Component {
                !shallowEqual(this.props, nextState)
     }
 }
+
+
+JSX 배열
+
+배열 내에 JSX 컴포넌트를 저장
+const componentList = [<MyComponent/>, <MySecondComponent/>, <b>HI</b>];
+
+배열컴포넌트를 위한 map() 함수 사용
+const todoList = [
+    {taskName : '빨래하기', finished : false},
+    {takeName : '공부하기', finished : true},
+];
+
+cosnt todos = todoList.map(todo => (
+    <div key = {todo.taskName}>{todo.taskName}</div>
+))
+
+const todos = todoList.map(todo => <TodoTask taskName = {todo.taskName}/>);
+
+
+
+<컴포넌트에서 DOM 객체 함수 사용>
+
+컴포넌트에서 addEventListener() 함수와 같은 DOM 객체 함수 사용할 때
+특정 DOM 객체를 사용해야 하는 상황이 발생한다.
+예를 들면, 특정 엘리먼트 크기나 위치를 가져올 때, 스크롤바 위치를
+이를 위해 컴포넌트 내에 정의된 변수에 DOM 객체를 저장함
+특수 프로퍼티 변수 ref 사용
