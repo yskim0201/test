@@ -1,26 +1,39 @@
 import React from 'react';
-import Counter from './06/Counter2'
+import Input from './06/Input'
 
 class App extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            count : 1,
-        };
-        //this.increaseCount = this.increaseCount.bind(this);
-        //bind 함수를 사용하면 오류 해결 가능
+            name : "홍길동",
+        }; 
+        this.onChange = this.onChange.bind(this);
     }
-    increaseCount() {
-        this.setState(({count}) => ({count : count + 1}));
+    onChange(key, value) {
+        this.setState({
+            [key] : value,
+        });
     }
-
+    onFocus() {
+        console.log("입력창 포커스")
+    }
     render() {
         return (
-            //<Counter count={this.state.count} onAdd={this.increaseCount.bind(this)}/>
-            <div>
-                현재 카운트 : {this.state.count}
-                <button onClick={() => this.increaseCount()}>App 카운트 증가</button>
-            </div>
+            <>
+                <Input
+                    label = "이름"
+                    name ="name" 
+                    value = {this.state.name}
+                    type ="text"
+                    errorMessage = "이름을 입력해야 합니다"
+                    autoFocus = {true}
+                    onChange = {this.onChange}
+                    onFocus = {this.onFocus}
+                />
+                <div>
+                    <button>{this.state.name}</button>
+                </div>
+            </>
         );
     }
 }
