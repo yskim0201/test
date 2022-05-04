@@ -893,3 +893,70 @@ function App() {
 export default App;
 
 
+
+
+import React, { Component } from 'react';
+
+class MyComponent extends Component {
+    componentDidUpdate() { console.log('MyComponent 새로 고침'); }
+    render() {return <div>   </div>;}
+}
+
+class MyPureComponent  extends React.PureComponent {
+    componentDidUpdate() {console.log('MyPureComponent 새로고침');}
+        render() {return <div>   </div>;}
+}
+
+class App extends React.Component {
+    constructor(props) {
+        super(props);
+        this.listValue = [{name : "park"}, {name : "Lee"}];
+        this.state = {version : 0};
+        this.handleClick = this.handleClick.bind(this);
+    }
+    handleClick() {
+        this.listValue[0].name = "Justin";
+        this.setState({version : 1});
+        setTimeout(() => {
+            this.listValue[0].name = "None";
+        }, 1000);
+        setTimeout(() => {
+            this.listValue.pop();
+            this.setState({version : 2});
+        }, 2000)
+    }
+    render() {
+        return (
+            <div className = "body">
+                <MyComponent value = {this.listValue}/>
+                <MyPureComponent value = {this.listValue}/>
+                <button onClick = {this.handleClick}>값 변경</button>
+            </div>
+        );
+    }
+}
+
+export default App;
+
+
+
+// 다음 시간부터
+import React from 'react';
+import Input from './06/Input'
+
+class App extends React.Component {
+    render(){
+        return (
+            <Input 
+                label = "이름" 
+                name ="name" 
+                value = "홍길동" 
+                type ="text"
+                errorMessage = "이름을 입력해야 합니다"
+                autoFocus = {true}
+            />
+        );
+    }
+}
+
+export default App;
