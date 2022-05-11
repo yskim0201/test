@@ -1,5 +1,7 @@
 import { configure, setAddon } from "@storybook/react";
 import interopRequireDefault from "babel-runtime/helpers/interopRequireDefault";
+import JSXAddon from 'storybook-addon-jsx';
+
 function loadStories() {
     const context = require.context("../src/stories", true, /Story\.jsx$/);
     //context() 함수로 Story로 끝나는 파일 이름 목록 가져오기
@@ -7,6 +9,8 @@ function loadStories() {
         interopRequireDefault(context(srcFile));
     });
 }
+
+setAddon(JSXAddon);
 configure(loadStories, module);
 
 

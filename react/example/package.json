@@ -1,5 +1,12 @@
 {
   "name": "example",
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "storybook": "start-storybook -p 9001 -c .storybook"
+  },
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -11,25 +18,19 @@
     "next": "^8.1.0",
     "react": "^16.7.0",
     "react-dom": "^16.7.0",
-    "react-redux": "^6.0.0",
+    "react-redux": "^8.0.1",
     "react-router-dom": "^5.0.0",
     "react-scripts": "2.1.7",
     "react-test-renderer": "^16.7.0",
     "react-with-styles": "^3.2.1",
     "recompose": "^0.30.0",
+    "redux": "^4.2.0",
     "redux-pack": "^0.1.5",
     "redux-thunk": "^2.3.0",
     "reselect": "^4.0.0",
     "selector-action": "^1.1.1",
     "shallowequal": "^1.1.0",
     "uuid": "^8.3.2"
-  },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "storybook": "start-storybook -p 9001 -c .storybook"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -43,8 +44,11 @@
   "devDependencies": {
     "@babel/core": "^7.17.10",
     "@babel/preset-env": "^7.17.10",
-    "@storybook/react": "5.2.6",
-    "babel-loader": "^8.2.5",
-    "webpack": "^5.72.0"
+    "@storybook/addon-actions": "5.2.6",
+    "@storybook/addons": "5.2.6",
+    "@storybook/react": "^6.4.22",
+    "babel-loader": "8.0.5",
+    "storybook-addon-jsx": "7.1.13",
+    "webpack": "4.28.3"
   }
 }
